@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/main.css">
-    <title>Turn Based Game</title>
-  </head>
-  <body>
-    <main id=container>
+<head>
+  <meta charset="utf-8">
 
-      <section id=header>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/main.css">
+  <title>Turn Based Game</title>
+</head>
+
+<body>
+  <main id=container>
+
+    <section id=header>
       <p> Choose A Character</p>
       <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
-</div>
-      </section>
+        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </section>
 
-      <section id=player>
+    <section id=player>
+      <figure class="players-picture">
 
-      </section>
+        <img class="player1-pic" src="#" alt="player one picture">
+        <img class="player2-pic" src="#" alt="player two picture">
+        <img class="player3-pic" src="#" alt="player three picture">
 
-      <section id=enemy>
+      </figure>
 
-      </section>
+      <div class="health-bar-player">
+        <progress id="player-health" value="100" max="100"></progress>
 
-    </main>
+      </div>
 
-<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-<script src="./scripts/main.js"></script>
-  </body>
+      <button class="fight-button" type="button">Fight</button>
+
+
+    </section>
+
+    <section id=enemy>
+
+      <img class="enemy1-pic" src="#" alt="enemy one picture">
+      <img class="enemy2-pic" src="#" alt="enemy two picture">
+      <img class="enemy2-pic" src="#" alt="enemy three picture">
+
+      <div class="health-bar-enemy">
+        <progress id="enemy-health" value="100" max="100"></progress>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script src="./scripts/main.js"></script>
+</body>
+
 </html>

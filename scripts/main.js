@@ -16,3 +16,10 @@ window.onclick = function(event) {
     }
   }
 }
+
+
+let player-health = document.getElementById("health")
+health.value -= 10;
+
+let enemy-health = document.getElementById("health")
+health.value -= 10;
