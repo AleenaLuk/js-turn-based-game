@@ -57,3 +57,33 @@
   margin-left: 16%;
   width: 26%;
 }
+
+/* fight button style */
+.fight-button{
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  color: red;
+}
+
+/* Player picture */
+.player1-pic{
+  max-width: 28%;
+  max-height: 28%;
+}
+.player2-pic{
+  max-width: 50%;
+  max-height: 50%;
+}
+.player3-pic{
+  max-width: 40%;
+  max-height: 40%;
+}
+
+#player-health{
+  width: 30%;
+}
+
+#enemy-health{
+  width: 30%;
+}

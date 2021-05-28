@@ -17,7 +17,7 @@ window.onclick = function(event) {
 }
 
 const player = document.querySelectorAll('.chosen-player')
-const fighButton= document.querySelector('.fight-button');
+const fightButton= document.querySelector('.fight-button');
 
 
 function Player(name, power, health) {
@@ -39,23 +39,38 @@ function Game({player, enemy}) {
 
 Game.prototype.play = function() {
   player.forEach(function(button) {
-    button.addEventListener('click', this.Game)
+    button.addEventListener('click', attack)
   })
 }
 
-Game.prototype.play = function() {
-  fightButton.addEventListener('click', this.Game)
-  }
+// Game.prototype.play = function() {
+//   fightButton.addEventListener('click', this.Game)
+//   }
 
-Game.prototype.fight = function() {
-  
-}
+fightButton.addEventListener('click', this.Game);
+
+//  Player(Game){ //create
+//   const name: ["Charmander", "Squirtle", "Charmelion"];
+//   const power: 20;
+//   const health: 100;
+// }
+//
+// Enemy(Game){
+//   const name: ["Grunt", "Soldier", "Boss"];
+//   const power: 10;
+//   const health: 100;
+// }
 
 
 
 //healthbars
 let player_health = document.getElementById("player-health")
-player_health.value -= 10;
+function attack(fightbutton){
+  enemy_health.value -= 10;
+}
+attack();
 
 let enemy_health = document.getElementById("enemy-health")
-enemy_health.value -= 10;
+if(//logic for after enemy takes damage){
+player_health.value -= 10;
+}
