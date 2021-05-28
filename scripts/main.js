@@ -17,22 +17,11 @@ window.onclick = function(event) {
 }
 
 const player = document.querySelectorAll('.chosen-player')
-<<<<<<< HEAD
-const fightButton= document.querySelector('.fight-button');
-=======
 const fightButton = document.querySelector('.fight-button');
 const diceRoller = function(sides, rolls) {
   let sum = 0;
   for(i = 0; i <= rolls; i++) {
     sum += Math.floor(Math.random() * sides)
-  }
-}
->>>>>>> 5ba21f1 (added .gitignore and worked on player prototypes)
-
-let turnCounter = 1;
-let switchTurns = function() {
-  if(enemy.hitpoints <= 0) {
-    enemy.death();
   }
 }
 
@@ -89,31 +78,6 @@ function Game({player, enemy}) {
   this.enemy = new Enemy(enemy)
 }
 
-<<<<<<< HEAD
-Game.prototype.play = function() {
-  player.forEach(function(button) {
-    button.addEventListener('click', attack)
-  })
-}
-
-// Game.prototype.play = function() {
-//   fightButton.addEventListener('click', this.Game)
-//   }
-
-fightButton.addEventListener('click', this.Game);
-
-//  Player(Game){ //create
-//   const name: ["Charmander", "Squirtle", "Charmelion"];
-//   const power: 20;
-//   const health: 100;
-// }
-//
-// Enemy(Game){
-//   const name: ["Grunt", "Soldier", "Boss"];
-//   const power: 10;
-//   const health: 100;
-// }
-=======
 function attack(event) {
   console.log(`Fight`)
 }
@@ -121,7 +85,6 @@ function attack(event) {
 function player_select(event) {
   console.log(`Your player`)
 }
->>>>>>> 5ba21f1 (added .gitignore and worked on player prototypes)
 
 player.forEach(function(button) {
   button.addEventListener('click', player_select)
@@ -152,12 +115,7 @@ enemies.push(enemy3)
 
 //healthbars
 let player_health = document.getElementById("player-health")
-function attack(fightbutton){
-  enemy_health.value -= 10;
-}
-attack();
+player_health.value -= 10;
 
 let enemy_health = document.getElementById("enemy-health")
-if(//logic for after enemy takes damage){
-player_health.value -= 10;
-}
+enemy_health.value -= 10;
