@@ -16,6 +16,9 @@ window.onclick = function(event) {
   }
 }
 
+const player = document.querySelectorAll('.chosen-player')
+
+
 function Player(name, power, health) {
   this.name = name;
   this.power = power;
@@ -34,13 +37,15 @@ function Game({player, enemy}) {
 }
 
 Game.prototype.play = function() {
-  
+  player.forEach(function(button) {
+    button.addEventListener('click', this.Game)
+  })
 }
 
 
 //healthbars
-let player-health = document.getElementById("health")
-health.value -= 10;
+let player_health = document.getElementById("player-health")
+player_health.value -= 10;
 
-let enemy-health = document.getElementById("health")
-health.value -= 10;
+let enemy_health = document.getElementById("enemy-health")
+enemy_health.value -= 10;
