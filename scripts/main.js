@@ -17,6 +17,7 @@ window.onclick = function(event) {
 }
 
 const player = document.querySelectorAll('.chosen-player')
+const fighButton= document.querySelector('.fight-button');
 
 
 function Player(name, power, health) {
@@ -41,6 +42,15 @@ Game.prototype.play = function() {
     button.addEventListener('click', this.Game)
   })
 }
+
+Game.prototype.play = function() {
+  fightButton.addEventListener('click', this.Game)
+  }
+
+Game.prototype.fight = function() {
+  
+}
+
 
 
 //healthbars
