@@ -19,12 +19,11 @@
     </header>
 
     <section id="interface" class="row characters">
-      <p> Choose A Character </p>
       <div class="col dropdown">
-        <button onclick="myFunction()" class="col-2 dropbtn drop-down-menu">Choose A Character</button>
+        <button onclick="myFunction()" class="col-2 dropbtn">Choose A Character</button>
         <div id="myDropdown" class="dropdown-content">
 
-          <section class='row'>
+          <section class='row player'>
             <script id="char-template" type="text/x-handlebars-template">
               {{#each player}}
             <a href="#" class='col' onclick="Game.setGameStart('{{name}}')">
@@ -51,16 +50,6 @@
 
     <section id=player>
 
-
-      <div class="health-bar-player">
-        <progress id="player-health" value="100" max="100"></progress>
-
-      </div>
-
-      <div class="health-bar-enemy">
-        <progress id="enemy-health" value="100" max="100"></progress>
-
-      </div>
 
 
 
