@@ -8,6 +8,10 @@ body {
   box-sizing: border-box;
 }
 
+.logo {
+  width: 35%;
+}
+
 #character {
   width: 20%;
 }
@@ -22,7 +26,22 @@ body {
   font-weight: 600;
 }
 
-.dropbtn {
+.characters {
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-around;
+    /* transition: visibility 0.3s ease, opacity 0.3s ease, height 0.3s ease; */
+}
+
+  .char-container h2 {
+    text-transform: capitalize;
+    font-size: 1.5em;
+    /* font-weight: 600; */
+  }
+
+
+
+ /* .dropbtn {
   background-color: #3498DB;
   color: white;
   padding: 16px;
