@@ -30,7 +30,7 @@ body {
   }
 
 
- /* .dropbtn {
+ .dropbtn {
   background-color: #3498DB;
   color: white;
   padding: 16px;
@@ -91,7 +91,7 @@ body {
   width: 26%;
 }
 
-/* fight button style */
+/* fight button style
 .fight-button{
   width: 200px;
   height: 50px;

@@ -71,7 +71,7 @@ Player.prototype.defense = function() {
   return this.defenseStat
 }
 
-Player.prototype.death {
+Player.prototype.death = function(){
   if(player.hitpoint <= 0) {
     alert(`You have been defeated!`)
   }
@@ -85,7 +85,7 @@ Enemy.prototype.defense = function() {
   return this.defenseStat
 }
 
-Enemy.prototype.death {
+Enemy.prototype.death = function(){
   if(enemy.hitpoint <= 0) {
     alert(`You have won!`)
   }
@@ -96,9 +96,35 @@ function Game({player, enemy}) {
   this.enemy = new Enemy(enemy)
 }
 
-function attack(event) {
+
+function pAttack(event) {
+  let enemy_health = document.getElementById("enemy-health")
+  let attackValue = Math.floor(Math.random() * 10);
+  if (attackValue > 8){
+    console.log(`You got a 'Critical Hit!'`)
+    attackValue = 15;
+  } else {
+  enemy_health.value -= attackValue;
   console.log(`Fight`)
+  console.log(enemy_health)
 }
+eAttack();
+}
+
+function eAttack() {
+  let attackValue = Math.floor(Math.random() * 10);
+  if (attackValue > 8){
+    console.log(`Enemy got a 'Critical Hit!'`)
+    attackValue = 15;
+  } else {
+  const player_health = document.getElementById("player-health")
+  player_health.value -= attackValue;
+  console.log(`Fight`)
+  console.log(player_health)
+}
+}
+
+
 
 function player_select(event) {
   console.log(`Your player`)
@@ -110,10 +136,10 @@ player.forEach(function(button) {
 
 
 
-fightButton.addEventListener('click', attack)
+fightButton.addEventListener('click', pAttack)
 
 
-let players = []
+const players = []
 
 let player1 = new Player("Charmander", 5, 5, 8)
 players.push(player1)
@@ -122,7 +148,7 @@ players.push(player2)
 let player3 = new Player("Charmeleon", 7, 3, 5)
 players.push(player3)
 
-let enemies = []
+const enemies = []
 
 let enemy1= new Enemy("Grunt", 2, 5, 7)
 enemies.push(enemy1)
@@ -130,10 +156,3 @@ let enemy2 = new Enemy("Rain", 4, 7, 9)
 enemies.push(enemy2)
 let enemy3 = new Enemy("Boss", 6, 9, 10)
 enemies.push(enemy3)
-
-//healthbars
-let player_health = document.getElementById("player-health")
-player_health.value -= 10;
-
-let enemy_health = document.getElementById("enemy-health")
-enemy_health.value -= 10;
