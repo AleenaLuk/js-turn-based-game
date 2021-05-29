@@ -18,12 +18,30 @@ window.onclick = function(event) {
 
 const player = document.querySelectorAll('.chosen-player')
 const fightButton = document.querySelector('.fight-button');
-const diceRoller = function(sides, rolls) {
-  let sum = 0;
-  for(i = 0; i <= rolls; i++) {
-    sum += Math.floor(Math.random() * sides)
+
+// function enableButtons() {
+// 	fightButton.disabled = false;
+// }
+
+// const diceRoller = function(sides, rolls) {
+//   let sum = 0;
+//   for(i = 0; i <= rolls; i++) {
+//     sum += Math.floor(Math.random() * sides)
+//   }
+// }
+
+
+//generate a random enemy (3 enemies)
+function randomEnemy(max, min){
+
+  if(min === undefined || min === '' || min === null){
+
+    min = 0;
   }
+
+  return Math.floor(Math.random() * (max - min) + min);
 }
+console.log('you are battling against player number', randomEnemy(4, 1));
 
 function Player(name, attack, defense, health) {
   this.name = name;
@@ -46,7 +64,7 @@ function Enemy(name, attack, defense, health) {
 }
 
 Player.prototype.attack = function() {
-  return this.attackStat + diceRoller(this.attackStat, 1)
+  return this.attackStat + diceRoller(this.attackStat, 1);
 }
 
 Player.prototype.defense = function() {
