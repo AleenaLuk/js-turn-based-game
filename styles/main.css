@@ -22,22 +22,11 @@ body {
   width: 20%;
 }
 
-.char-container h2 {
-  text-transform: capitalize;
-  font-size: 1.5em;
-  font-weight: 600;
-}
-
 .characters {
     display: flex;
     margin-top: 5%;
     justify-content: space-around;
 }
-
-  .char-container h2 {
-    text-transform: capitalize;
-    font-size: 1.5em;
-  }
 
   #character:hover{
       transform: scale(1.3);
