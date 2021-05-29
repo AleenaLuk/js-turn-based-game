@@ -53,6 +53,13 @@ setFight: function() {
  }
 }
 
+  const source = document.querySelector('#char-template').innerHTML;
+  const template = Handlebars.compile(source);
+  const context = {
+    player: data.stats,
+  }
+  const html = template(context);
+  document.querySelector('.dropdown-content').innerHTML = html;
 
 Player.prototype.death = function(){
   if(player.hitpoint <= 0) {
@@ -68,12 +75,13 @@ Enemy.prototype.death = function(){
 }
 
 
+
 function pAttack() {
   let enemy_health = document.getElementById("enemy-health")
   let attackValue = Math.floor(Math.random() * 10);
   if (attackValue > 8){
     console.log(`You got a 'Critical Hit!'`)
-    attackValue = 15;
+    attackValue = Math.floor(player.attack * 1.5);
   } else {
   enemy_health -= attackValue;
   console.log(`Fight`)

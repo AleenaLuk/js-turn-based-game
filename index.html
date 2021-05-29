@@ -25,27 +25,17 @@
         <div id="myDropdown" class="dropdown-content">
 
           <section class='row'>
-            <a href="#" class='col' onclick="Game.setGameStart('Charmander')">
-              <img id="character" src="./images/charmander.png">
+            <script id="char-template" type="text/x-handlebars-template">
+              {{#each player}}
+            <a href="#" class='col' onclick="Game.setGameStart('{{name}}')">
+              <img id="character" src="{{image}}">
               <div>
-                <h3>Charmander</h3>
-                <p>A small lizard like creature with a flame on it's tail</p>
+                <h3>{{name}}</h3>
+                <p>{{description}}</p>
               </div>
             </a>
-            <a href="#" class='col' onclick="Game.setGameStart('Squirtle')">
-              <img id="character" src="./images/squirtle.png">
-              <div>
-                <h3>Squirtle</h3>
-                <p>A hero in a half shell with a propensity for water</p>
-              </div>
-            </a>
-            <a href="#" class='col' onclick="Game.setGameStart('Bulbasaur')">
-              <img id="character" src="./images/bulbasaur.png">
-              <div>
-                <h3>Bulbasaur</h3>
-                <p>A small dinosaur with a flower bulb growing out of it's back</p>
-              </div>
-            </a>
+            {{/each}}
+          </script>
           </section>
         </div>
       </div>
