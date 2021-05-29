@@ -11,7 +11,7 @@ let Game = {
      case "Squirtle":
          player = new Player(name, 10, 100);
          break;
-     case "Charmeleon":
+     case "Bulbasaur":
          player = new Player(name, 10, 100);
          break;
 
@@ -26,41 +26,60 @@ let Game = {
    getHeader.innerHTML = '<p>Task: Fight!</p>';
    getActions.innerHTML = '<a href="#" class="btn-prefight" onclick="Game.setFight()">Start batte!</a>';
    getArena.style.visibility = "visible";
+ },
+setFight: function() {
+   let getHeader = document.querySelector(".header")
+   let getActions = document.querySelector(".actions")
+   let getEnemy = document.querySelector(".enemy")
+   // create enemy
+   let enemy00 = new Enemy("Charmeleon", 10, 100);
+   let enemy01 = new Enemy("Wartortle", 10, 100);
+   let enemy02 = new Enemy("Ivysaur", 10, 100);
+   // generate a random enemy (3 enemies)
+   let chooseRandomEnemy = Math.floor(Math.random() * Math.floor(3));
+   console.log(chooseRandomEnemy)
+   switch (chooseRandomEnemy) {
+     case 0:
+      enemy = enemy00
+       break;
+    case 1:
+      enemy = enemy01;
+      break;
+    case 2:
+      enemy = enemy02
+      break;
+   }
+   getHeader.innerHTML = '<p>Task: Choose your move</p>'
+   getActions.innerHTML = '<a href="#" class="btn-prefight" onclick="pAttack()">Attack!</a>';
+   getEnemy.innerHTML = '<img src="./images/' + enemy.name.toLowerCase() + '.png" alt="' + name +'" class="img-avatar">';
  }
 }
 
-let player = document.querySelectorAll('.chosen-player')
-const fightButton = document.querySelector('.fight-button');
+
+// let player = document.querySelectorAll('.chosen-player')
+// const fightButton = document.querySelector('.fight-button');
 
 // function enableButtons() {
 // 	fightButton.disabled = false;
 // }
 
 
-//generate a random enemy (3 enemies)
-function randomEnemy(max, min){
+// generate a random enemy (3 enemies)
+// function randomEnemy(max, min){
+//
+//   if(min === undefined || min === '' || min === null){
+//
+//     min = 0;
+//   }
+//
+//   return Math.floor(Math.random() * (max - min) + min);
+// }
+// console.log('you are battling against player number', randomEnemy(4, 1));
 
-  if(min === undefined || min === '' || min === null){
 
-    min = 0;
-  }
+const fightButton = document.querySelector('.fight-button')
 
-  return Math.floor(Math.random() * (max - min) + min);
-}
-console.log('you are battling against player number', randomEnemy(4, 1));
-
-function Player(name, attack, health) {
-  this.name = name;
-  this.attack = attack;
-  this.health = health;
-}
-
-function Enemy(name, attack, health) {
-  this.name = name;
-  this.attack = attack;
-  this.health = health;
-}
-
+fightButton.addEventListener('click', pAttack)
 
 Player.prototype.death = function(){
   if(player.hitpoint <= 0) {
@@ -75,7 +94,6 @@ Enemy.prototype.death = function(){
   }
 }
 
-
 function pAttack(event) {
   let enemy_health = document.getElementById("enemy-health")
   let attackValue = Math.floor(Math.random() * 10);
@@ -83,11 +101,11 @@ function pAttack(event) {
     console.log(`You got a 'Critical Hit!'`)
     attackValue = 15;
   } else {
-  enemy_health.value -= attackValue;
+  enemy_health -= attackValue;
   console.log(`Fight`)
   console.log(enemy_health)
 }
-eAttack();
+setTimeout(eAttack(), 1.0);
 }
 
 function eAttack() {
@@ -109,9 +127,6 @@ function player_select(event) {
 
 }
 
-player.forEach(function(button) {
-  button.addEventListener('click', player_select)
-})
 
 
 

@@ -39,11 +39,11 @@
             <p>A hero in a half shell with a propensity for water</p>
           </div>
            </a>
-        <a href="#" class='col' onclick="Game.setGameStart('Charmeleon')">
-          <img id="character" src="./images/charmeleon.png">
+        <a href="#" class='col' onclick="Game.setGameStart('Bulbasaur')">
+          <img id="character" src="./images/bulbasaur.png">
           <div>
-            <h3>Charmeleon</h3>
-            <p>A large almost dinosaur creature with a flame on it's tail. Could it be related to Charmander?</p>
+            <h3>Bulbasaur</h3>
+            <p>A small dinosaur with a flower bulb growing out of it's back</p>
           </div>
         </a>
       </section>
@@ -60,13 +60,7 @@
     </section>
 
     <section id=player>
-      <!-- <figure class="players-picture">
 
-        <img class="player1-pic" src="./images/charmander.png" alt="player one picture">
-        <img class="player2-pic" src="./images/sticker.png" alt="player two picture">
-        <img class="player3-pic" src="./images/ash.ketchum.png" alt="player three picture">
-
-      </figure> -->
   (Click Fight and Enemy Takes Damage Then Player Does)
 
        <div class="health-bar-player">
@@ -74,33 +68,27 @@
 
       </div>
 
-      <button class="fight-button" type="button">Fight</button>
-
-
-    </section>
-
-    <section id=enemy>
-
-      <img class="enemy1-pic" src="#" alt="enemy one picture">
-      <img class="enemy2-pic" src="#" alt="enemy two picture">
-      <img class="enemy2-pic" src="#" alt="enemy three picture">
-
-
-
-      <section id=player>
-
-      </section>
-
       <div class="health-bar-enemy">
         <progress id="enemy-health" value="100" max="100"></progress>
 
       </div>
 
+
     </section>
+
+    <section class=enemy>
+
+      
+
+    </section>
+
+
 
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script src="./scripts/player.js"></script>
+  <script src="./scripts/enemy.js"></script>
   <script src="./scripts/main.js"></script>
 </body>
 
