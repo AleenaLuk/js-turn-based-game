@@ -24,8 +24,7 @@ let Game = {
    let getActions = document.querySelector(".actions")
    let getArena = document.querySelector(".arena")
    getHeader.innerHTML = '<p>Task: Fight!</p>';
-   getActions.innerHTML = '<a href="#" class="btn-prefight" onclick="Game.setFight()">Start batte!</a>';
-   getArena.style.visibility = "visible";
+   getActions.innerHTML = '<a href="#" class="" onclick="Game.setFight()">Start batte!</a>';
  },
 setFight: function() {
    let getHeader = document.querySelector(".header")
@@ -49,37 +48,11 @@ setFight: function() {
       enemy = enemy02
       break;
    }
-   getHeader.innerHTML = '<p>Task: Choose your move</p>'
    getActions.innerHTML = '<a href="#" class="btn-prefight" onclick="pAttack()">Attack!</a>';
    getEnemy.innerHTML = '<img src="./images/' + enemy.name.toLowerCase() + '.png" alt="' + name +'" class="img-avatar">';
  }
 }
 
-
-// let player = document.querySelectorAll('.chosen-player')
-// const fightButton = document.querySelector('.fight-button');
-
-// function enableButtons() {
-// 	fightButton.disabled = false;
-// }
-
-
-// generate a random enemy (3 enemies)
-// function randomEnemy(max, min){
-//
-//   if(min === undefined || min === '' || min === null){
-//
-//     min = 0;
-//   }
-//
-//   return Math.floor(Math.random() * (max - min) + min);
-// }
-// console.log('you are battling against player number', randomEnemy(4, 1));
-
-
-const fightButton = document.querySelector('.fight-button')
-
-fightButton.addEventListener('click', pAttack)
 
 Player.prototype.death = function(){
   if(player.hitpoint <= 0) {
@@ -94,7 +67,8 @@ Enemy.prototype.death = function(){
   }
 }
 
-function pAttack(event) {
+
+function pAttack() {
   let enemy_health = document.getElementById("enemy-health")
   let attackValue = Math.floor(Math.random() * 10);
   if (attackValue > 8){
@@ -105,7 +79,7 @@ function pAttack(event) {
   console.log(`Fight`)
   console.log(enemy_health)
 }
-setTimeout(eAttack(), 1.0);
+eAttack();
 }
 
 function eAttack() {
@@ -123,14 +97,6 @@ function eAttack() {
 
 
 
-function player_select(event) {
-
-}
-
-
-
-
-fightButton.addEventListener('click', pAttack)
 
 
 
