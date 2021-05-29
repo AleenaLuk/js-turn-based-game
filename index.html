@@ -13,47 +13,61 @@
 <body>
   <main id=container>
 
-<section class= "characters">
-    <header>
+
+    <header class="header">
       <img class="logo" src="./images/pokemon.png" alt="Pokemon">
         </header>
-      <p> Choose A Character </p>
-      <div class="dropdown">
-<button onclick="myFunction()" class="dropbtn">Dropdown</button>
-<div id="myDropdown" class="dropdown-content"> -->
 
-<!-- select -->
-      <div class="char-container">
-         <img id="character" src="./images/charmander.png">
-         <h2>Charmander</h2>
-         </div>
-      <div class="char-container2">
-        <img id="character2" src="./images/sticker.png">
-        <h2>Squirtle</h2>
+    <section id= "interface" class= "row characters">
+      <p> Choose A Character </p>
+      <div class="col-6 dropdown">
+        <button onclick="myFunction()" class="col-6 dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+
+      <section class='row'>
+        <a href="#" class='col' onclick="Game.setGameStart('Charmander')">
+          <img id="character" src="./images/charmander.png">
+        <div>
+          <h3>Charmander</h3>
+          <p>A small lizard like creature with a flame on it's tail</p>
         </div>
-      <div class="char-container3">
-        <img id="character3" src="./images/ash.ketchum.png">
-        <h2>Big Charmander</h2>
+         </a>
+        <a href="#" class='col' onclick="Game.setGameStart('Squirtle')">
+          <img id="character" src="./images/squirtle.png">
+          <div>
+            <h3>Squirtle</h3>
+            <p>A hero in a half shell with a propensity for water</p>
+          </div>
+           </a>
+        <a href="#" class='col' onclick="Game.setGameStart('Charmeleon')">
+          <img id="character" src="./images/charmeleon.png">
+          <div>
+            <h3>Charmeleon</h3>
+            <p>A large almost dinosaur creature with a flame on it's tail. Could it be related to Charmander?</p>
+          </div>
+        </a>
+      </section>
       </div>
-  <a href="#">Player 1  <img id="character" src="./images/charmander.png"> </a>
-  <a href="#">Player 2  <img id="character2" src="./images/sticker.png"> </a>
-  <a href="#">Player 3  <img id="character3" src="./images/ash.ketchum.png"></a>
-</div>
-</div>
+    </div>
+    </section>
+
+    <section class='actions'>
+
+    </section>
+
+    <section class='arena'>
+
     </section>
 
     <section id=player>
-      <figure class="players-picture">
+      <!-- <figure class="players-picture">
 
         <img class="player1-pic" src="./images/charmander.png" alt="player one picture">
         <img class="player2-pic" src="./images/sticker.png" alt="player two picture">
         <img class="player3-pic" src="./images/ash.ketchum.png" alt="player three picture">
 
-<<<<<<< HEAD
-      </figure>  -->
-=======
-      </figure>
->>>>>>> 2244b42 (Click Fight and Enemy Takes Damage Then Player Does)
+      </figure> -->
+  (Click Fight and Enemy Takes Damage Then Player Does)
 
        <div class="health-bar-player">
         <progress id="player-health" value="100" max="100"></progress>
@@ -82,7 +96,7 @@
 
       </div>
 
-    </section> -->
+    </section>
 
   </main>
 

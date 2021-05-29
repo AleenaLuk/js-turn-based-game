@@ -1,33 +1,39 @@
-//Dropdown button
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
+let Game = {
+ setGameStart: function(name) {
+  this.resetPlayer(name);
+  this.setPreFight();
+ },
+ resetPlayer: function(name) {
+   switch (name) {
+     case "Charmander":
+       player = new Player(name, 10, 100);
+       break;
+     case "Squirtle":
+         player = new Player(name, 10, 100);
+         break;
+     case "Charmeleon":
+         player = new Player(name, 10, 100);
+         break;
+
+   }
+   let getInterface = document.querySelector('#interface');
+   getInterface.innerHTML = '<img src="./images/' + name.toLowerCase() + '.png" class="img-avatar"><section><h3>' + name + '</h3>';
+ },
+ setPreFight: function() {
+   let getHeader = document.querySelector(".header")
+   let getActions = document.querySelector(".actions")
+   let getArena = document.querySelector(".arena")
+   getHeader.innerHTML = '<p>Task: Fight!</p>';
+   getActions.innerHTML = '<a href="#" class="btn-prefight" onclick="Game.setFight()">Start batte!</a>';
+   getArena.style.visibility = "visible";
+ }
 }
 
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-
-const player = document.querySelectorAll('.chosen-player')
+let player = document.querySelectorAll('.chosen-player')
 const fightButton = document.querySelector('.fight-button');
 
 // function enableButtons() {
 // 	fightButton.disabled = false;
-// }
-
-// const diceRoller = function(sides, rolls) {
-//   let sum = 0;
-//   for(i = 0; i <= rolls; i++) {
-//     sum += Math.floor(Math.random() * sides)
-//   }
 // }
 
 
@@ -43,33 +49,18 @@ function randomEnemy(max, min){
 }
 console.log('you are battling against player number', randomEnemy(4, 1));
 
-function Player(name, attack, defense, health) {
+function Player(name, attack, health) {
   this.name = name;
   this.attack = attack;
-  this.defense = defense;
   this.health = health;
-  this.attackStat = attack * 5;
-  this.hitPoints = health * 10;
-  this.defenseStat = defense * 5;
 }
 
-function Enemy(name, attack, defense, health) {
+function Enemy(name, attack, health) {
   this.name = name;
   this.attack = attack;
-  this.defense = defense;
   this.health = health;
-  this.attackStat = attack * 5;
-  this.hitPoints = health * 10;
-  this.defenseStat = defense * 5;
 }
 
-Player.prototype.attack = function() {
-  return this.attackStat + diceRoller(this.attackStat, 1);
-}
-
-Player.prototype.defense = function() {
-  return this.defenseStat
-}
 
 Player.prototype.death = function(){
   if(player.hitpoint <= 0) {
@@ -77,23 +68,11 @@ Player.prototype.death = function(){
   }
 }
 
-Enemy.prototype.attack = function() {
-  return this.attackStat + diceRoller(this.attackStat, 1)
-}
-
-Enemy.prototype.defense = function() {
-  return this.defenseStat
-}
 
 Enemy.prototype.death = function(){
   if(enemy.hitpoint <= 0) {
     alert(`You have won!`)
   }
-}
-
-function Game({player, enemy}) {
-  this.player= new Player(player)
-  this.enemy = new Enemy(enemy)
 }
 
 
@@ -127,7 +106,7 @@ function eAttack() {
 
 
 function player_select(event) {
-  console.log(`Your player`)
+
 }
 
 player.forEach(function(button) {
@@ -139,20 +118,21 @@ player.forEach(function(button) {
 fightButton.addEventListener('click', pAttack)
 
 
-const players = []
 
-let player1 = new Player("Charmander", 5, 5, 8)
-players.push(player1)
-let player2 = new Player("Squirtle", 3, 7, 9)
-players.push(player2)
-let player3 = new Player("Charmeleon", 7, 3, 5)
-players.push(player3)
+//Dropdown button
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
 
-const enemies = []
-
-let enemy1= new Enemy("Grunt", 2, 5, 7)
-enemies.push(enemy1)
-let enemy2 = new Enemy("Rain", 4, 7, 9)
-enemies.push(enemy2)
-let enemy3 = new Enemy("Boss", 6, 9, 10)
-enemies.push(enemy3)
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
