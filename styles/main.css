@@ -1,4 +1,4 @@
-/* Dropdown Button */
+
 header {
   text-align: center;
 }
@@ -26,22 +26,7 @@ body {
   font-weight: 600;
 }
 
-.characters {
-    display: flex;
-    margin-top: 5%;
-    justify-content: space-around;
-    /* transition: visibility 0.3s ease, opacity 0.3s ease, height 0.3s ease; */
-}
-
-  .char-container h2 {
-    text-transform: capitalize;
-    font-size: 1.5em;
-    /* font-weight: 600; */
-  }
-
-
-
- /* .dropbtn {
+ .dropbtn {
   background-color: #3498DB;
   color: white;
   padding: 16px;
@@ -81,32 +66,6 @@ body {
 
 .show {
   display: block;
-}
-
-*/
-
-/* #character {
-  margin-left: 10%;
-  width: 17%;
-}
-
-#character2 {
-  margin-left: 10%;
-  width:17%;
-  text-align: center;
-}
-
-#character3 {
-  margin-left: 16%;
-  width: 26%;
-}
-
-/* fight button style
-.fight-button{
-  width: 200px;
-  height: 50px;
-  background-color: black;
-  color: red;
 }
 
 /* Player picture */

@@ -16,42 +16,39 @@
 
     <header class="header">
       <img class="logo" src="./images/pokemon.png" alt="Pokemon">
-        </header>
+    </header>
 
-    <section id= "interface" class= "row characters">
+    <section id="interface" class="row characters">
       <p> Choose A Character </p>
-      <!-- <div class="dropdown">
-<button onclick="myFunction()" class="dropbtn">Dropdown</button>
-<div id="myDropdown" class="dropdown-content"> -->
+      <div class="col-6 dropdown">
+        <button onclick="myFunction()" class="col-6 dropbtn">Choose A Character</button>
+        <div id="myDropdown" class="dropdown-content">
 
-<!-- </select> -->
-<section class= "characters">
-      <div class="char-container">
-         <img id="character" src="./images/charmander.png">
-         <h2>Charmander</h2>
-         </div>
-      <div class="char-container2">
-        <img id="character2" src="./images/sticker.png">
-        <h2>Squirtle</h2>
+          <section class='row'>
+            <a href="#" class='col' onclick="Game.setGameStart('Charmander')">
+              <img id="character" src="./images/charmander.png">
+              <div>
+                <h3>Charmander</h3>
+                <p>A small lizard like creature with a flame on it's tail</p>
+              </div>
+            </a>
+            <a href="#" class='col' onclick="Game.setGameStart('Squirtle')">
+              <img id="character" src="./images/squirtle.png">
+              <div>
+                <h3>Squirtle</h3>
+                <p>A hero in a half shell with a propensity for water</p>
+              </div>
+            </a>
+            <a href="#" class='col' onclick="Game.setGameStart('Bulbasaur')">
+              <img id="character" src="./images/bulbasaur.png">
+              <div>
+                <h3>Bulbasaur</h3>
+                <p>A small dinosaur with a flower bulb growing out of it's back</p>
+              </div>
+            </a>
+          </section>
         </div>
-         </a>
-        <a href="#" class='col' onclick="Game.setGameStart('Squirtle')">
-          <img id="character" src="./images/squirtle.png">
-          <div>
-            <h3>Squirtle</h3>
-            <p>A hero in a half shell with a propensity for water</p>
-          </div>
-           </a>
-        <a href="#" class='col' onclick="Game.setGameStart('Bulbasaur')">
-          <img id="character" src="./images/bulbasaur.png">
-          <div>
-            <h3>Bulbasaur</h3>
-            <p>A small dinosaur with a flower bulb growing out of it's back</p>
-          </div>
-        </a>
-      </section>
       </div>
-    </div>
     </section>
 
     <section class='actions'>
@@ -64,7 +61,7 @@
 
     <section id=player>
 
-       <div class="health-bar-player">
+      <div class="health-bar-player">
         <progress id="player-health" value="100" max="100"></progress>
 
       </div>
