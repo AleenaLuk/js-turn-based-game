@@ -17,7 +17,7 @@ let Game = {
 
    }
    let getInterface = document.querySelector('#interface');
-   getInterface.innerHTML = '<img src="./images/' + name.toLowerCase() + '.png" class="img-avatar"><section><h3>' + name + '</h3>';
+   getInterface.innerHTML = '<img src="./images/' + name.toLowerCase() + '.png" class="img-avatar"><section><h3>' + name + '</h3>    <div class="health-bar-player"><progress id="player-health" value="100" max="100"></progress></div><div class="health-bar-enemy"><progress id="enemy-health" value="100" max="100"></progress></div>';
  },
  setPreFight: function() {
    let getHeader = document.querySelector(".header")
