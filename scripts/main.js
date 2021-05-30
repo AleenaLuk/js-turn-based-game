@@ -1,3 +1,4 @@
+(function() {
 
 'use strict'
 
@@ -26,7 +27,7 @@ let Game = {
     let getHeader = document.querySelector(".header")
     let getActions = document.querySelector(".actions")
     getHeader.innerHTML = '<p>Fight!</p>';
-    getActions.innerHTML = '<a href="#" class="" onclick="Game.setFight()">Start batte!</a>';
+    getActions.innerHTML = '<a href="#" class="start" onclick="Game.setFight()">Start batte!</a>';
   },
   setFight: function() {
     let getHeader = document.querySelector(".header")
@@ -74,6 +75,7 @@ function pAttack() {
     attackValue = Math.floor(player.attack * 1.5);
     enemy_health.value -= attackValue;
     alert(`${player.name} got a 'Critical Hit!'`)
+    alert(`${player.name} did ${attackValue} damage!`)
   } else {
     enemy_health.value -= attackValue;
     alert(`${enemy.name} did ${attackValue} damage!`)
@@ -93,6 +95,7 @@ function eAttack() {
     attackValue = 15;
     player_health.value -= attackValue;
     alert(`${enemy.name} got a 'Critical Hit!'`)
+    alert(`${enemy.name} did ${attackValue} damage!`)
   } else {
     player_health.value -= attackValue;
     alert(`${player.name} did ${attackValue} damage!`)
@@ -132,3 +135,4 @@ window.onclick = function(event) {
     }
   }
 }
+})

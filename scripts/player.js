@@ -1,3 +1,5 @@
+(function (){
+
 'use strict'
 
 let player;
@@ -9,7 +11,6 @@ function Player(name, attack, health) {
 }
 
 const data = {
-  "count": 3,
   "stats": [{
     name: "Charmander",
     description: "A small lizard like creature with a flame on it's tail",
@@ -24,3 +25,4 @@ const data = {
     image: "./images/bulbasaur.png"
   }]
 }
+})
