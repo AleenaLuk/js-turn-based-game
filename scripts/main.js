@@ -112,14 +112,15 @@ function eAttack() {
 }
 
 function endGame() {
-  const player_health = document.getElementById("player-health")
-  const enemy_health = document.getElementById("enemy-health")
+  const player_health = document.getElementById("player-health");
+  const enemy_health = document.getElementById("enemy-health");
   if (player_health.value <= 0){
-    alert(`You have failed! The enemy has taken over.`)
+    alert(`You have failed! The enemy has taken over.`);
   } else if(enemy_health.value <= 0){
-    alert(`Congragulations! You are the new Champion`)
-    Game;
+    alert(`Congragulations! You are the new Champion`);
   }
+  window.location.reload();
+  alert('Please play again!')
 }
 
 
