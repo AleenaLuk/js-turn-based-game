@@ -80,10 +80,10 @@ function pAttack() {
   let enemy_health = document.getElementById("enemy-health")
   let attackValue = Math.floor(Math.random() * 10);
   if (attackValue > 8){
-    console.log(`You got a 'Critical Hit!'`)
+    alert(`You got a 'Critical Hit!'`)
     attackValue = Math.floor(player.attack * 1.5);
   } else {
-  enemy_health -= attackValue;
+  enemy_health.value -= attackValue;
   console.log(`Fight`)
   console.log(enemy_health)
 }
@@ -93,7 +93,7 @@ eAttack();
 function eAttack() {
   let attackValue = Math.floor(Math.random() * 10);
   if (attackValue > 8){
-    console.log(`Enemy got a 'Critical Hit!'`)
+    alert(`Enemy got a 'Critical Hit!'`)
     attackValue = 15;
   } else {
   const player_health = document.getElementById("player-health")
