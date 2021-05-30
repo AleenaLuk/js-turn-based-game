@@ -6,9 +6,12 @@ header {
 body {
   text-align: center;
   box-sizing: border-box;
-  background-color: #35363A;
+
 }
 
+ /* #container {
+  background-image: url("./images/starsbackround.webp");
+} */
 
 .logo {
   width: 35%;
@@ -33,10 +36,10 @@ body {
       margin-bottom: 17px;
     }
 
-.charmander {
+/* .charmander {
   background-image: url("../images/grassbackground.gif");
   position: relative;
-}
+} */
 .overlay::before {
     content: "";
     position: absolute;
