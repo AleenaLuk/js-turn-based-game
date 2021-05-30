@@ -23,7 +23,7 @@ let Game = {
     let getHeader = document.querySelector(".header")
     let getActions = document.querySelector(".actions")
     let getArena = document.querySelector(".arena")
-    getHeader.innerHTML = '<p>Task: Fight!</p>';
+    getHeader.innerHTML = '<p>Fight!</p>';
     getActions.innerHTML = '<a href="#" class="" onclick="Game.setFight()">Start batte!</a>';
   },
   setFight: function() {
@@ -61,33 +61,20 @@ const context = {
 const html = template(context);
 document.querySelector('.dropdown-content').innerHTML = html;
 
-Player.prototype.death = function() {
-  if (player.hitpoint <= 0) {
-    alert(`You have been defeated!`)
-  }
-}
-
-
-Enemy.prototype.death = function() {
-  if (enemy.hitpoint <= 0) {
-    alert(`You have won!`)
-  }
-}
-
-
 
 function pAttack() {
   const enemy_health = document.getElementById("enemy-health")
   let attackValue = Math.floor(Math.random() * 10);
   if (attackValue === 0) {
-    alert(`Your attack missed!`)
+    alert(`${player.name}'s attack missed!`)
   }
   if (attackValue > 8) {
     attackValue = Math.floor(player.attack * 1.5);
     enemy_health.value -= attackValue;
-    alert(`You got a 'Critical Hit!'`)
+    alert(`${player.name} got a 'Critical Hit!'`)
   } else {
     enemy_health.value -= attackValue;
+    alert(`${enemy.name} did ${attackValue} damage!`)
   } if (enemy_health.value <= 0){
     endGame();
   }
@@ -98,14 +85,15 @@ function eAttack() {
   const player_health = document.getElementById("player-health")
   let attackValue = Math.floor(Math.random() * 10);
   if (attackValue === 0) {
-    alert(`The enemies attack missed!`)
+    alert(`${enemy.name}'s attack missed!`)
   }
   if (attackValue > 8) {
     attackValue = 15;
     player_health.value -= attackValue;
-    alert(`Enemy got a 'Critical Hit!'`)
+    alert(`${enemy.name} got a 'Critical Hit!'`)
   } else {
     player_health.value -= attackValue;
+    alert(`${player.name} did ${attackValue} damage!`)
   } if (player_health.value <= 0){
     endGame();
   }
