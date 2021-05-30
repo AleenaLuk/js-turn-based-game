@@ -77,7 +77,6 @@ function pAttack() {
     alert(`${player.name} did ${attackValue} damage!`)
   } else {
     enemy_health.value -= attackValue;
-    alert(`${enemy.name} did ${attackValue} damage!`)
   } if (enemy_health.value <= 0){
     endGame();
   }
@@ -97,7 +96,6 @@ function eAttack() {
     alert(`${enemy.name} did ${attackValue} damage!`)
   } else {
     player_health.value -= attackValue;
-    alert(`${player.name} did ${attackValue} damage!`)
   } if (player_health.value <= 0){
     endGame();
   }
