@@ -1,3 +1,5 @@
+'use strict'
+
 let player;
 
 function Player(name, attack, health) {

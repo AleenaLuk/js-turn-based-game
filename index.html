@@ -1,5 +1,7 @@
+
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -28,15 +30,15 @@
           <section class='row player'>
             <script id="char-template" type="text/x-handlebars-template">
               {{#each player}}
-            <a href="#" class='col' onclick="Game.setGameStart('{{name}}')">
-              <img id="character" src="{{image}}">
-              <div>
-                <h3>{{name}}</h3>
-                <p>{{description}}</p>
-              </div>
-            </a>
-            {{/each}}
-          </script>
+                <a href="#" class='col' onclick="Game.setGameStart('{{name}}')">
+                  <img id="character" src="{{image}}">
+                  <div>
+                    <h3>{{name}}</h3>
+                    <p>{{description}}</p>
+                  </div>
+                </a>
+              {{/each}}
+            </script>
           </section>
         </div>
       </div>

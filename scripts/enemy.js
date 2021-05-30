@@ -1,3 +1,6 @@
+
+'use strict'
+
 let enemy;
 
 function Enemy(name, attack, health) {

@@ -1,3 +1,6 @@
+
+'use strict'
+
 let Game = {
   setGameStart: function(name) {
     this.resetPlayer(name);
@@ -22,7 +25,6 @@ let Game = {
   setPreFight: function() {
     let getHeader = document.querySelector(".header")
     let getActions = document.querySelector(".actions")
-    let getArena = document.querySelector(".arena")
     getHeader.innerHTML = '<p>Fight!</p>';
     getActions.innerHTML = '<a href="#" class="" onclick="Game.setFight()">Start batte!</a>';
   },
