@@ -1,5 +1,3 @@
-(function (){
-
 'use strict'
 
 let player;
@@ -25,4 +23,3 @@ const data = {
     image: "./images/bulbasaur.png"
   }]
 }
-})

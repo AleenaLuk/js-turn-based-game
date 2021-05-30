@@ -1,4 +1,3 @@
-(function() {
 
 'use strict'
 
@@ -135,4 +134,3 @@ window.onclick = function(event) {
     }
   }
 }
-})
