@@ -20,9 +20,12 @@ body {
   background-image: url("../images/starsbackround.webp");
 }
 
+.characters section h3 {
+  color: #f1f1f1;
+}
 
 .logo {
-  width: 35%;
+  width: 460px;
 }
 
 .logo:hover{
@@ -57,7 +60,9 @@ body {
 
 #character {
   width: 20%;
+  /* color: #f1f1f1; */
 }
+
 
 .img-avatar {
   width: 20%;
@@ -74,13 +79,7 @@ body {
       margin-bottom: 17px;
     }
 
-<<<<<<< HEAD
-/* .charmander {
-  background-image: url("../images/grassbackground.gif");
-  position: relative;
-} */
-=======
->>>>>>> 8a7305f (main.css)
+
 .overlay::before {
     content: "";
     position: absolute;
@@ -117,7 +116,7 @@ body {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  margin-left: 400px;
+  margin: 0 32%;
 }
 
 .dropdown-content a {
@@ -159,3 +158,8 @@ body {
 #enemy-health {
   width: 30%;
 }
+
+/* .text-color {
+  color: #f1f1f1;
+
+} */
