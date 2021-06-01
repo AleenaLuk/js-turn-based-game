@@ -71,7 +71,7 @@ function pAttack() {
     alert(`${player.name}'s attack missed!`)
   }
   if (attackValue > 8) {
-    attackValue = Math.floor(player.attack * 1.5);
+    attackValue = Math.floor(attackValue * 1.5);
     enemy_health.value -= attackValue;
     alert(`${player.name} got a 'Critical Hit!'`)
     alert(`${player.name} did ${attackValue} damage!`)
