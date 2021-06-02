@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,7 +14,6 @@
 
   <main id="container">
 
-
     <header class="header">
       <img class="logo" src="./images/pokemon.png" alt="Pokemon">
     </header>
@@ -25,49 +22,31 @@
       <div class="col dropdown">
         <button onclick="myFunction()" class="col-2 dropbtn">Choose A Character</button>
         <div id="myDropdown" class="dropdown-content">
-
-          <section class='row player'>
-            <script id="char-template" type="text/x-handlebars-template">
-              {{#each player}}
-                <a href="#" class='col' onclick="Game.setGameStart('{{name}}')">
-                  <img id="character" src="{{image}}">
-                  <div>
-                    <h3>{{name}}</h3>
-                    <p>{{description}}</p>
-                  </div>
-                </a>
-              {{/each}}
-            </script>
-          </section>
+          <section class='row player'></section>
         </div>
       </div>
     </section>
 
-    <section class='actions'>
+    <section class='actions'></section>
 
-    </section>
+    <section class='arena'></section>
 
-    <section class='arena'>
+    <section id=player></section>
 
-    </section>
-
-    <section id=player>
-
-
-
-
-    </section>
-
-    <section class=enemy>
-
-
-
-
-    </section>
-
-
-
+    <section class=enemy></section>
   </main>
+
+  <script id="char-template" type="text/x-handlebars-template">
+    {{#each player}}
+      <a href="#" class='col' onclick="Game.setGameStart('{{name}}')">
+        <img id="character" src="{{image}}">
+        <div>
+          <h3>{{name}}</h3>
+          <p>{{description}}</p>
+        </div>
+      </a>
+    {{/each}}
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   <script src="./scripts/player.js"></script>
